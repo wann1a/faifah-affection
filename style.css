@@ -1,4 +1,4 @@
-#fa-like-bar {
+#faf-like-bar {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -10,8 +10,8 @@
   color: #ffd6e8;
   z-index: 50;
 }
-#fa-like-bar.fa-hidden { display: none; }
-#fa-like-bar .fa-lv {
+#faf-like-bar.faf-hidden { display: none; }
+#faf-like-bar .faf-lv {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -20,8 +20,8 @@
   font-size: 14px;
   white-space: nowrap;
 }
-#fa-like-bar .fa-lv-ic { font-size: 22px; line-height: 1; }
-#fa-like-bar .fa-track {
+#faf-like-bar .faf-lv-ic { font-size: 22px; line-height: 1; }
+#faf-like-bar .faf-track {
   position: relative;
   flex: 1;
   height: 18px;
@@ -29,7 +29,7 @@
   border-radius: 9px;
   overflow: hidden;
 }
-#fa-like-bar .fa-fill {
+#faf-like-bar .faf-fill {
   position: absolute;
   top: 0; left: 0; height: 100%;
   width: 0%;
@@ -37,7 +37,7 @@
   border-radius: 9px;
   transition: width 0.6s ease;
 }
-#fa-like-bar .fa-num {
+#faf-like-bar .faf-num {
   position: absolute;
   inset: 0;
   display: flex;
@@ -48,7 +48,7 @@
   color: #ffffff;
   text-shadow: 0 0 4px #000000;
 }
-.fa-chip {
+.faf-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -61,5 +61,5 @@
   font-weight: 700;
   color: #ff8fc4;
 }
-.fa-chip.fa-neg { border-color: #ff6a3d; color: #ff6a3d; }
-.fa-chip.fa-zero { border-color: #555555; color: #999999; }
+.faf-chip.faf-neg { border-color: #ff6a3d; color: #ff6a3d; }
+.faf-chip.faf-zero { border-color: #555555; color: #999999; }

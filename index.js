@@ -74,11 +74,11 @@
   function fmt(n) { return (n > 0 ? '+' : '') + n; }
 
   function ensureBar() {
-    if ($('#fa-like-bar').length) return;
+    if ($('#faf-like-bar').length) return;
     const bar = $(`
-      <div id="fa-like-bar">
-        <div class="fa-lv"><span class="fa-lv-ic"></span><span class="fa-lv-name"></span></div>
-        <div class="fa-track"><div class="fa-fill"></div><div class="fa-num"></div></div>
+      <div id="faf-like-bar">
+        <div class="faf-lv"><span class="faf-lv-ic"></span><span class="faf-lv-name"></span></div>
+        <div class="faf-track"><div class="faf-fill"></div><div class="faf-num"></div></div>
       </div>`);
     $('#chat').before(bar);
   }
@@ -86,13 +86,13 @@
   function renderBar(value) {
     const s = settings();
     ensureBar();
-    const bar = $('#fa-like-bar');
-    bar.toggleClass('fa-hidden', !s.enabled);
+    const bar = $('#faf-like-bar');
+    bar.toggleClass('faf-hidden', !s.enabled);
     const [, label, icon] = levelFor(value, s.max);
-    bar.find('.fa-lv-ic').text(icon);
-    bar.find('.fa-lv-name').text(label);
-    bar.find('.fa-fill').css('width', (value / s.max) * 100 + '%');
-    bar.find('.fa-num').text(`❤️ ${value} / ${s.max}`);
+    bar.find('.faf-lv-ic').text(icon);
+    bar.find('.faf-lv-name').text(label);
+    bar.find('.faf-fill').css('width', (value / s.max) * 100 + '%');
+    bar.find('.faf-num').text(`❤️ ${value} / ${s.max}`);
   }
 
   function updatePrompt(value) {
@@ -129,7 +129,7 @@
       }
 
       const d = applied[id];
-      const old = el.querySelector('.fa-chip');
+      const old = el.querySelector('.faf-chip');
       if (d === undefined) {
         if (old) old.remove();
         return;
@@ -138,7 +138,7 @@
       if (old && old.dataset.v === String(d)) return;
       if (old) old.remove();
       const chip = document.createElement('div');
-      chip.className = 'fa-chip' + (d < 0 ? ' fa-neg' : d === 0 ? ' fa-zero' : '');
+      chip.className = 'faf-chip' + (d < 0 ? ' faf-neg' : d === 0 ? ' faf-zero' : '');
       chip.dataset.v = String(d);
       chip.textContent = text;
       mt.insertAdjacentElement('afterend', chip);
